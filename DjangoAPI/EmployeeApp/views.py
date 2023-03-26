@@ -8,6 +8,10 @@ from EmployeeApp.serializers import DepartmentSerializer, EmployeeSerializer
 
 from django.core.files.storage import default_storage
 # create your views here
+
+def index(request):
+    return render(request, 'EmployeeApp/index.html')
+
 @csrf_exempt
 def departmentApi(request, id=0):
     if request.method == 'GET':
